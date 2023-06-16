@@ -1,0 +1,29 @@
+{
+    "name": "MrMan",
+    "version": "1.0.0",
+    "icons": {
+        "16": "images/mrman.png",
+        "32": "images/mrman.png",
+        "48": "images/mrman.png",
+        "128": "images/mrman.png"
+    },
+    "description": "connector",
+    "manifest_version": 3,
+    "author": "tim.Adurah",
+    "action": {
+        "default_popup": "index.html",
+        "default_title": "MrMan"
+    },
+    "content_scripts": [
+        {
+            "run_at": "document_end",
+            "matches": [
+                "http://*/*",
+                "https://*/*"
+            ],
+            "js": [
+                "js/injector.js"
+            ]
+        }
+    ]
+}
